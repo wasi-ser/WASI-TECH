@@ -9,7 +9,7 @@
       "asta": "pm2 start . --deep-monitoring --attach --name wasi-ser || node .",
       "start": "pm2 start . --attach --name wasi-ser",
       "stop": "pm2 stop wasi-ser",
-      "heroku-postbuild": "git clone https://github.com/wasi-ser/WASI-TECH.git temp && mv tempp/.git .git && rm -rf tempp && npx puppeteer@latest install  --y",
+      "heroku-postbuild": "git clone https://github.com/wasi-ser/WASI-TECH.git tempp && mv tempp/.git .git && rm -rf tempp && npx puppeteer@latest install  --y",
       "fis-heroku-postbuild": "git clone https://github.com/wasi-ser/WASI-TECH.git temp1 && rsync -av temp1/* ./ && rsync -av temp1/.* ./ && rm -rf temp1 && npm i && npx puppeteer@latest install",
       "postinstall": "npx puppeteer@latest install --y"
    },
